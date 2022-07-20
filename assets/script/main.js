@@ -97,7 +97,7 @@ form.addEventListener("submit", (e) => {
   const sub = inputSub.value;
   const msg = message.value;
 
-  if (name !== "" || email !== "" || sub !== "" || msg !== "") {
+  if (name !== "" && email !== "" && sub !== "" && msg !== "") {
     const storeFormData = {
       name: name,
       email: email,
@@ -105,6 +105,7 @@ form.addEventListener("submit", (e) => {
       message: msg,
     };
     console.log(storeFormData);
+    form.reset();
   } else {
     alert("Blank are not allwoed!");
   }
